@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabriela Salviatti Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body { padding-top: 56px; transition: background 0.4s, color 0.4s; }
+    .navbar { box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .navbar-nav .nav-link { color: white; }
+    .navbar-nav .nav-link:hover { color: #f8f9fa; }
+    .toggle-btn, .lang-btn { cursor: pointer; font-size: 1.1rem; margin-left: 15px; }
+
+    .about-section, .projects-section, .skills-section, .contact-section {
+      padding: 60px 0;
+    }
+
+    .about-section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #007bff;
+    }
+
+    .btn-animated {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-animated:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .dark-mode {
+      background-color: #121212 !important;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .navbar {
+      background-color: #000 !important;
+    }
+    .card-hover {
+     position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-hover .card-img-top {
+    transition: transform 0.3s ease;
+    }
+
+    .card-hover:hover .card-img-top {
+    transform: scale(1.1);
+    }
+
+    .card-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+    }
+    .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 8px;
+    display: block;
+    transition: transform 0.2s ease;
+    }
+
+    .social-icon:hover {
+    transform: scale(1.1);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gabriela Salviatti</a>
+      <div class="ml-auto d-flex align-items-center">
+        <span class="lang-btn text-white" onclick="toggleLanguage()">🌐 EN/PT</span>
+        <span class="toggle-btn text-white ml-3" onclick="toggleDarkMode()">🌙</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <h2 class="animate__animated animate__fadeIn">About</h2>
+      <img src="C:\Users\GabrielaSoares\Downloads\1637614867412.jpeg" alt="Gabriela Salviatti" class="mb-3 animate__animated animate__zoomIn">
+      
+      <!-- English Text -->
+      <p class="about-text-en">Hey! I’m Gabi Salviatti — data nerd, dashboard lover, and firm believer that numbers tell the best stories (when you know how to listen).</p>
+      <p class="about-text-en">With a background in Business Administration and a Master’s in Data Science, I’ve spent the last few years helping companies turn messy data into clear, actionable insights.</p>
+      <p class="about-text-en">I’ve worked across franchising, finance, and tech, and I thrive where business meets analytics. My goal? To build tools that don’t just report the past, but help shape the future.</p>
+
+      <!-- Portuguese Text -->
+      <p class="about-text-pt d-none">Oi! Eu sou a Gabi Salviatti — apaixonada por dados, dashboards e por transformar números em histórias que fazem sentido (e ação!).</p>
+      <p class="about-text-pt d-none">Com formação em Administração e mestrado em Ciência de Dados, ajudo empresas a transformar bagunça em clareza com insights práticos e visuais impactantes.</p>
+      <p class="about-text-pt d-none">Já atuei em franquias, finanças e tecnologia. Meu objetivo? Criar ferramentas que não apenas mostrem o passado, mas ajudem a construir o futuro.</p>
+
+      <!-- Resume Button -->
+      <a href="C:\Users\GabrielaSoares\Downloads\Gabi Salviatti BR Resume - 2025.pdf" class="btn btn-primary mt-3 btn-animated" download>
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
+      <h2 class="text-center animate__animated animate__fadeIn">Power BI Projects</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card card-hover">
+            <img src="C:\Users\GabrielaSoares\Downloads\HR Report.png" class="card-img-top" alt="HR Dashboard">
+            <div class="card-body">
+              <h5 class="card-title">HR Metrics Dashboard</h5>
+              <p class="card-text">Overview of headcount, retention, and turnover trends with filters by location, tenure, and hire date.</p>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiMzdlNWExMDUtNWY4Ni00MGQwLThkNGUtOWM3MTcxNmYxM2FhIiwidCI6ImY3MmViOTJiLTgyMWItNDkxMC05ZjhhLWUwYjU5OWIwYjhiNSJ9" class="btn btn-primary" target="_blank">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card card-hover">
+            <img src="C:\Users\GabrielaSoares\Downloads\Octobean.png" class="card-img-top" alt="Octobean Koffee">
+            <div class="card-body">
+              <h5 class="card-title">Octobean Koffee – 6 Month Review</h5>
+              <p class="card-text">Performance of new Kraken Koffee stores with time-series analysis, peak hours, and $1.4M forecast.</p>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiZWQyZjNhOTUtMTVlMi00NDA4LWJlYzUtNDA1NmZiNzQ1OGU0IiwidCI6ImY3MmViOTJiLTgyMWItNDkxMC05ZjhhLWUwYjU5OWIwYjhiNSJ9" class="btn btn-primary" target="_blank">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card card-hover">
+            <img src="C:\Users\GabrielaSoares\Downloads\Austin.png" class="card-img-top" alt="Austin Housing">
+            <div class="card-body">
+              <h5 class="card-title">Austin Housing Data Insights</h5>
+              <p class="card-text">Interactive map + AI model reveal pricing drivers in the Austin real estate market.</p>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiOWVmNjM4YWUtOTYzYy00NTlhLTg1ZTYtMGMzYzg5NDAzYTcyIiwidCI6ImY3MmViOTJiLTgyMWItNDkxMC05ZjhhLWUwYjU5OWIwYjhiNSJ9" class="btn btn-primary" target="_blank">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section bg-white">
+    <div class="container">
+      <h2 class="text-center animate__animated animate__fadeIn">Skills</h2>
+      <div class="row">
+        <!-- Skill Card -->
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\3.png" class="card-img-top" alt="SQL">
+            <div class="card-body"><h5 class="card-title">SQL</h5></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\powerbi.png" class="card-img-top" alt="Power BI">
+            <div class="card-body"><h5 class="card-title">Power BI</h5></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\vecteezy_microsoft-excel-icon-logo-symbol_27179363.png" class="card-img-top" alt="Excel">
+            <div class="card-body"><h5 class="card-title">Excel</h5></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\salesforce-logo-png_seeklogo-256541.png" class="card-img-top" alt="Salesforce">
+            <div class="card-body"><h5 class="card-title">Salesforce</h5></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\airtable_logo_icon_169629.png" class="card-img-top" alt="Airtable">
+            <div class="card-body"><h5 class="card-title">Airtable</h5></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card text-center">
+            <img src="C:\Users\GabrielaSoares\Downloads\Anaplan.png" class="card-img-top" alt="Anaplan">
+            <div class="card-body"><h5 class="card-title">Anaplan</h5></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section text-center text-white bg-dark">
+    <div class="container">
+      <h2>Contact Me</h2>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-2">
+          <p><i class="fas fa-envelope"></i> gabisalviatti@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +1 (806) 283-3219 – WhatsApp | (19) 99235-5476
+          </p>
+        </div>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-auto mx-3 mb-3">
+          <a href="https://linkedin.com/in/gabrielasalviatti" target="_blank" class="d-block">
+            <img src="C:\Users\GabrielaSoares\Downloads\linkedin.png" alt="LinkedIn" class="social-icon mb-2">
+            <span class="text-white d-block">LinkedIn</span>
+          </a>
+        </div>
+        <div class="col-auto mx-3 mb-3">
+          <a href="https://github.com/gsalviatti" target="_blank" class="d-block">
+            <img src="C:\Users\GabrielaSoares\Downloads\github.png" alt="GitHub" class="social-icon mb-2">
+            <span class="text-white d-block">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <!-- JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    AOS.init();
+  
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  
+    function toggleLanguage() {
+      const enText = document.querySelectorAll('.about-text-en');
+      const ptText = document.querySelectorAll('.about-text-pt');
+      enText.forEach(e => e.classList.toggle('d-none'));
+      ptText.forEach(e => e.classList.toggle('d-none'));
+    }
+  </script>
+  </body>
+  </html>
+  
